@@ -51,5 +51,12 @@ describe("First Suit", () => {
 
        cy.contains('[status="warning"]','Sign in')
 
+       cy.get("#inputEmail3")
+        .parents('form')
+        .find('button')
+        .should('contain','Sign in')
+        .parents('form')
+        .find('nb-checkbox')
+        .click()
     });
 });
